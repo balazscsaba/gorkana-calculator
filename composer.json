@@ -1,0 +1,11 @@
+{
+    "name": "evozon/gorkana_calc",
+    "description": "Gorkana Calculator",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Csaba Balazs",
+            "email": "csaba.balazs@evozon.com"
+        }
+    ]
+}
