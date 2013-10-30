@@ -1,5 +1,5 @@
 {
-    "name": "evozon/gorkana_calc",
+    "name": "evozon/gorkana-calculator",
     "description": "Gorkana Calculator",
     "minimum-stability": "stable",
     "authors": [
@@ -13,6 +13,6 @@
         "zendframework/zend-math": "2.2.4"
     },
     "autoload": {
-        "psr-0": {"Gorkana\\Calculator\\": "src/"}
+        "psr-0": {"Gorkana\\": "vendor/"}
     }
 }
