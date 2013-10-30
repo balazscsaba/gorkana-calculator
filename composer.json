@@ -7,5 +7,8 @@
             "name": "Csaba Balazs",
             "email": "csaba.balazs@evozon.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {"Gorkana\\Calculator\\": "src/"}
+    }
 }

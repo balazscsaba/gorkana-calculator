@@ -1,0 +1,4 @@
+add    2
+div 3  
+power 2
+apply 3

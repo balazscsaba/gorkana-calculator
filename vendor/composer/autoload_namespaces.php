@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Zend\\Math\\' => array($baseDir . '/', $vendorDir . '/zendframework/zend-math'),
+    'Zend\\Math\\' => array($vendorDir . '/zendframework/zend-math'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
-    '' => array($baseDir . '/src'),
+    'Gorkana\\Calculator\\' => array($baseDir . '/src'),
 );
