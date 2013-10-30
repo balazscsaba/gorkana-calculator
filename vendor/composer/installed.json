@@ -1,8 +1,8 @@
 [
     {
         "name": "symfony/console",
-        "version": "2.3.x-dev",
-        "version_normalized": "2.3.9999999.9999999-dev",
+        "version": "v2.3.6",
+        "version_normalized": "2.3.6.0",
         "target-dir": "Symfony/Component/Console",
         "source": {
             "type": "git",
@@ -31,7 +31,7 @@
                 "dev-master": "2.3-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-0": {
                 "Symfony\\Component\\Console\\": ""
