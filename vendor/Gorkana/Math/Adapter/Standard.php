@@ -223,54 +223,13 @@ class Standard implements Adapter\AdapterInterface
      * @param  string $operand
      * @param  int    $fromBase
      * @param  int    $toBase
-     * @return string
-     * @throws Exception\InvalidArgumentException
+     * @return int
+     * @throws Exception\RuntimeException
      */
     public function baseConvert($operand, $fromBase, $toBase = 10)
     {
-        if ($fromBase == $toBase) {
-            return $operand;
-        }
-
-        if ($fromBase < 2 || $fromBase > 62) {
-            throw new Exception\InvalidArgumentException(
-                "Unsupported base: {$fromBase}, should be 2..62"
-            );
-        }
-        if ($toBase < 2 || $toBase > 62) {
-            throw new Exception\InvalidArgumentException(
-                "Unsupported base: {$toBase}, should be 2..62"
-            );
-        }
-
-        $sign    = (strpos($operand, '-') === 0) ? '-' : '';
-        $operand = ltrim($operand, '-+');
-
-        $chars = self::BASE62_ALPHABET;
-
-        // convert to decimal
-        if ($fromBase == 10) {
-            $decimal = $operand;
-        } else {
-            $decimal = '0';
-            for ($i = 0, $len  = strlen($operand); $i < $len; $i++) {
-                $decimal = bcmul($decimal, $fromBase);
-                $decimal = bcadd($decimal, strpos($chars, $operand[$i]));
-            }
-        }
-
-        if ($toBase == 10) {
-            return $decimal;
-        }
-
-        // convert decimal to base
-        $result = '';
-        do {
-            $remainder = bcmod($decimal, $toBase);
-            $decimal   = bcdiv($decimal, $toBase);
-            $result    = $chars[$remainder] . $result;
-        } while (bccomp($decimal, '0'));
-
-        return $sign . $result;
+        throw new Exception\RuntimeException(
+            "Method \"".__FUNCTION__."\" not supported in adapter"
+        );
     }
 }

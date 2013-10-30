@@ -58,7 +58,7 @@ class App
      */
     protected function runWeb()
     {
-        // do nothing
+        die("Calculator is only available using the command line interface. Please check the README file for usage instructions.");
     }
 
     /**
