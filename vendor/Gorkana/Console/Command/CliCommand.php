@@ -57,5 +57,4 @@ EOT
 
         $output->writeln($result);
     }
-
 }

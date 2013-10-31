@@ -12,8 +12,8 @@ use Gorkana\Calculator\Exception;
  * @author       Balazs Csaba <csaba.balazs@evozon.com>
  * @copyright    Copyright (c) 2013 Gorkana (http://www.gorkana.com/)
  */
-class Calculate {
-
+class Calculate
+{
     /**
      * @var null|string
      */
