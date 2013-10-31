@@ -22,7 +22,7 @@ class Standard implements Adapter\AdapterInterface
      * @return bool|string
      * @throws Exception\RuntimeException
      */
-    public function init($operand, $base = null)
+    public function init($operand, $base = \NULL)
     {
         throw new Exception\RuntimeException(
             "Method \"".__FUNCTION__."\" not supported in adapter"
@@ -195,7 +195,7 @@ class Standard implements Adapter\AdapterInterface
      * @return int
      * @throws Exception\RuntimeException
      */
-    public function intToBin($operand, $twoc = false)
+    public function intToBin($operand, $twoc = \FALSE)
     {
         throw new Exception\RuntimeException(
             "Method \"".__FUNCTION__."\" not supported in adapter"
@@ -210,7 +210,7 @@ class Standard implements Adapter\AdapterInterface
      * @return int
      * @throws Exception\RuntimeException
      */
-    public function binToInt($bytes, $twoc = false)
+    public function binToInt($bytes, $twoc = \FALSE)
     {
         throw new Exception\RuntimeException(
             "Method \"".__FUNCTION__."\" not supported in adapter"

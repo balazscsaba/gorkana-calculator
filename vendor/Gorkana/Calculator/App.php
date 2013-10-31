@@ -30,8 +30,8 @@ class App
      */
     public function run()
     {
-        if ($this->isCLI()) {
-            $this->runCLI();
+        if ($this->isCli()) {
+            $this->runCli();
         } else {
             $this->runWeb();
         }
@@ -42,7 +42,7 @@ class App
      *
      * @return void
      */
-    protected function runCLI()
+    protected function runCli()
     {
         $app = new Application(self::APP_NAME, self::APP_VERSION);
         $app->addCommands(array(
@@ -66,8 +66,8 @@ class App
      *
      * @return bool
      */
-    protected function isCLI()
+    protected function isCli()
     {
-        return (php_sapi_name() == "cli");
+        return PHP_SAPI;
     }
 }

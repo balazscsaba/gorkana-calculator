@@ -80,7 +80,8 @@ class Calculate
      */
     public function availableInstructions()
     {
-        return implode(", ", array_keys($this->instructionsMap));
+        $list = implode(", ", array_keys($this->instructionsMap));
+        return $list;
     }
 
     /**
@@ -131,7 +132,8 @@ class Calculate
      */
     protected function isValidInstruction($instruction)
     {
-        return in_array($instruction, array_keys($this->instructionsMap));
+        $isValid = in_array($instruction, array_keys($this->instructionsMap));
+        return $isValid;
     }
 
     /**
