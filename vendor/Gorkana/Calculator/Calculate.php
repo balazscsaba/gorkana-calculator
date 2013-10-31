@@ -144,5 +144,4 @@ class Calculate {
     {
         throw new Exception\FileException($message);
     }
-
-} 
+}
