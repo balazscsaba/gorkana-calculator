@@ -51,8 +51,8 @@ class Calculate {
             $this->throwException("Input file does not exist or is not readable.");
         }
 
-        $content = str_replace(array("\r\n", "\r"), "\n", file_get_contents($this->filename));
-        $lines = explode("\n", $content);
+        $content      = str_replace(array("\r\n", "\r"), "\n", file_get_contents($this->filename));
+        $lines        = explode("\n", $content);
         $instructions = $this->parseInstructions($lines);
 
         if (empty($instructions)) {
@@ -60,7 +60,7 @@ class Calculate {
         }
 
         $result = 0;
-        $math = new MathAdapter\Standard();
+        $math   = new MathAdapter\Standard();
 
         foreach ($instructions as $operator => $operand) {
             if ($operator == "apply") {
@@ -94,9 +94,9 @@ class Calculate {
         $instructions = array();
 
         foreach ($lines as $line) {
-            $parts = explode(" ", preg_replace('/\s+/', " ", $line));
+            $parts    = explode(" ", preg_replace('/\s+/', " ", $line));
             $operator = isset($parts[0]) ? trim($parts[0]) : \NULL;
-            $operand = isset($parts[1]) ? trim($parts[1]) : \NULL;
+            $operand  = isset($parts[1]) ? trim($parts[1]) : \NULL;
 
             if (!$this->isValidInstruction($operator)) {
                 continue;
