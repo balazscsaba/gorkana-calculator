@@ -36,6 +36,12 @@ The application's core files can be found in the ```vendor/Gorkana``` folder, an
 ```Math``` - Contains the custom mathematical operations adapter
 * ```Adapter/Standard.php``` - Holds the implementations of the binary operations
 
+The application was structured this way to:
+1. Maintain Single responsibility principle, which states that every class should have a single responsibility,
+and that responsibility should be entirely encapsulated by the class.
+2. Maintain the API designs of Symfony/Console and Zend/Math packages
+3. Follow PSR-2 coding standards, so every class would have it's own namespace
+
 ## Installation ##
 Download the files and install the package using composer's install tool.
 ```bash
